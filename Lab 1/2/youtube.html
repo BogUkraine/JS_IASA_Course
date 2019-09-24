@@ -329,29 +329,69 @@
         <footer>
         </footer>
 
-        <form class="hot-form" id="hot-form" method="post" action="/about">
+        <form class="hot-form" id="hot-form" method="post">
                 <div class="hot-form__name">
                     <span>Помогите подобрать релевантный контент для вас</span>
                 </div>
                 <div class="hot-form__content-type form-block">
                     <span class="form-span">Какой тип контента хотите видеть?</span>
-                    <label><input type="checkbox" name="content-type" value="Развлекательный">Развлекательный</label>
-                    <label><input type="checkbox" name="content-type" value="Познавательный">Познавательный</label>
-                    <label><input type="checkbox" name="content-type" value="Мультфильмы">Мультфильмы</label>
-                    <label><input type="checkbox" name="content-type" value="Музыкальный">Музыкальный</label>
-                    <label><input type="checkbox" name="content-type" value="Игровой">Игровой</label>
+                    <label class="container">
+                        <input type="checkbox" name="content-type" value="Развлекательный">
+                        <span class="checkmark"></span>
+                        <span class="container-text">Развлекательный</span>
+                    </label>
+                    <label class="container">
+                        <input type="checkbox" name="content-type" value="Познавательный">
+                        <span class="checkmark"></span>
+                        <span class="container-text">Познавательный</span>
+                    </label>
+                    <label class="container">
+                        <input type="checkbox" name="content-type" value="Мультфильмы">
+                        <span class="checkmark"></span>
+                        <span class="container-text">Мультфильмы</span>
+                    </label>
+                    <label class="container">
+                        <input type="checkbox" name="content-type" value="Музыкальный">
+                        <span class="checkmark"></span>
+                        <span class="container-text">Музыкальный</span>
+                    </label>
+                    <label class="container">
+                        <input type="checkbox" name="content-type" value="Игровой">
+                        <span class="checkmark"></span>
+                        <span class="container-text">Игровой</span>
+                    </label>
                 </div>
                 <div class="hot-form__subscribers-count form-block">
                     <span class="form-span">Количество подписчиков на каналах:</span>
-                    <label><input type="radio" name="subscribers-count" value="&lt;10000">&lt;10000</label>
-                    <label><input type="radio" name="subscribers-count" value="10000-50000">10000-50000</label>
-                    <label><input type="radio" name="subscribers-count" value="50000-100000">50000-100000</label>
-                    <label><input type="radio" name="subscribers-count" value="100000-500000">100000-500000</label>
-                    <label><input type="radio" name="subscribers-count" value="&gt;500000">&gt;500000</label>
+                    <label class="container">
+                        <input type="radio" name="subscribers-count" value="&lt;10000">
+                        <span class="radiomark"></span>
+                        <span class="container-text">&lt;10000</span>
+                    </label>
+                    <label class="container">
+                        <input type="radio" name="subscribers-count" value="10000-50000">
+                        <span class="radiomark"></span>
+                        <span class="container-text">10000-50000</span>
+                    </label>
+                    <label class="container">
+                        <input type="radio" name="subscribers-count" value="50000-100000">
+                        <span class="radiomark"></span>
+                        <span class="container-text">50000-100000</span>
+                    </label>
+                    <label class="container">
+                        <input type="radio" name="subscribers-count" value="100000-500000">
+                        <span class="radiomark"></span>
+                        <span class="container-text">100000-500000</span>
+                    </label>
+                    <label class="container">
+                        <input type="radio" name="subscribers-count" value="&gt;500000">
+                        <span class="radiomark"></span>
+                        <span class="container-text">&gt;500000</span>
+                    </label>
                 </div>
                 <div class="hot-form__language form-block">
                     <span class="form-span">На каком языке должны быть видео?</span>
-                    <select>
+                    <select class="custom-select">
                         <option value="Английский">Английский</option>
                         <option value="Немецкий">Немецкий</option>
                         <option value="Русский">Русский</option>
@@ -364,7 +404,7 @@
                 </div>
                 <div class="hot-form__subtitles form-block">
                     <span class="form-span">Наличие субтитров на каком языке важно?</span>
-                    <select>
+                    <select class="custom-select">
                         <option value="Английский">Английский</option>
                         <option value="Немецкий">Немецкий</option>
                         <option value="Русский">Русский</option>
@@ -375,10 +415,13 @@
                         <option value="Украинский">Украинский</option>
                     </select>
                 </div>
-                <button class="hot-form__button-send" id="button-form-send"></button>
-                <button class="hot-form__button-close" id="button-form-close"></button>
+                <div class="hot-form__buttons">
+                    <button class="hot-form__button-send" id="button-form-send" value="Отправить">Отправить</button>
+                    <button class="hot-form__button-close" id="button-form-close" value="Закрыть">Закрыть</button>
+                </div>
             </form>
 
+        <script src="scripts/form_buttons.js"></script>
         <script src="scripts/aside.js"></script>
         <script src="scripts/form.js"></script>
     </body>

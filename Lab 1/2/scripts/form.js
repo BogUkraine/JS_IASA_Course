@@ -1,11 +1,16 @@
-const buttonOpenForm = document.getElementById('aside-button-form');
-const buttonCloseForm = document.getElementById('button-form-close');
-const form = document.getElementById('hot-form');
+var express = requre('express');
+var bodyParser = require('body-parser');
 
-buttonOpenForm.onclick = function() {
-    form.style.display = 'flex';
-};
+var app = express();
 
-buttonCloseForm.onclick = function() {
-    form.style.display = 'none';
-};
+var urlencodedParser = bodyParser.urlencoded({ extended: fallse });
+
+app.get('/about', function(req, res) {
+    res.render('about');
+});
+
+app.post('/about', urlencodedParser, function(req, res) {
+    if(!req.body) return console.log('No Data');
+    console.log(req.body);
+    res.render('about');
+});

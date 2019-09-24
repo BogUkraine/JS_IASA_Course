@@ -361,11 +361,11 @@ main {
 }
 
 .hot-form__content-type {
-    margin-top: -60px;
+    margin-top: -50px;
 }
 
 .hot-form__subscribers-count {
-    margin-top: -60px;
+    margin-top: -50px;
 }
 
 .hot-form__language {
@@ -376,6 +376,8 @@ main {
 
 .hot-form__subtitles {
     justify-content: center;
+    align-items: flex-start;
+    justify-items: flex-start;
 }
 
 .hot-form select {
@@ -383,11 +385,130 @@ main {
 }
 
 .hot-form__button-send {
-    width: 120px;
-    height: 35px;
+    width: 150px;
+    height: 40px;
 }
 
 .hot-form__button-close {
-    width: 120px;
-    height: 35px;
+    width: 150px;
+    height: 40px;
 }
+
+.hot-form__buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 90px 0 90px;
+}
+
+.container-text {
+    margin: 3px 0 0 30px;
+}
+
+/* Customize form elements */
+
+.hot-form button{
+    cursor: pointer;
+    background-color: #282828;
+    border: 3px solid #181818;
+    font-family: 'Roboto', 'Noto', sans-serif;
+    color: #c9c9c9;
+    font-size: 16px;
+}
+
+/* checkboxes */
+
+.hot-form label {
+    display: block;
+    position: relative;
+}
+
+.hot-form input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #282828;
+    border: 1px solid #000000;
+}
+
+.container:hover input ~ .checkmark {
+    background-color: #181818;
+}
+
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~
+.checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 2px;
+    top: 2px;
+    width: 14px;
+    height: 14px;
+    background-color: #000000;
+}
+
+/* radiobuttons */
+
+.hot-form input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.radiomark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #282828;
+    border-radius: 50%;
+    border: 1px solid #000000;
+}
+
+.container:hover input ~ .radiomark {
+    background-color: #181818;
+}
+
+.radiomark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~
+.radiomark:after {
+    display: block;
+}
+
+.container .radiomark:after {
+    left: 2px;
+    top: 2px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #000000;
+}
+
+/* select */
+
