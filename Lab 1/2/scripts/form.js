@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
-var urlencodedParser = bodyParser.urlencoded({ extended: fallse });
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 app.get('/about', function(req, res) {
     res.render('about');
