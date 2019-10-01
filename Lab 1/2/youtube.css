@@ -129,7 +129,7 @@ form {
 .wrapper-aside-big {
     display: flex;
     width: 240px;
-    height: 100vh;
+    height: calc(100vh - 56px);
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -150,8 +150,16 @@ form {
     overflow-y: auto;
 }
 
-.aside-small {
+.wrapper-aside-small {
     display: none;
+    width: 80px;
+    height: calc(100vh - 56px);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.aside-small {
+    display: flex;
     flex-flow: row wrap;
     position: fixed;
     align-content: flex-start;
@@ -162,7 +170,6 @@ form {
     color: #909090;
     font-size: 10px;
     background-color: #282828;
-    margin-top: 56px;
 }
 
 span {
@@ -273,14 +280,23 @@ main {
     display: flex;
     flex-grow: 1;
     flex-shrink: 1;
-    height: 100vh;
+    height: calc(100vh - 56px);
     overflow-y: auto;
     background-color: #1f1f1f;
 }
 
+.flex-sider {
+    flex: 1;
+    height: calc(100vh - 56px);
+    width: 5px;
+}
+
 .wrapper {
     display: flex;
-    padding: 0px 5px 0px 20px;
+}
+
+.wrapper-recomendation {
+    flex: 35;
 }
 
 .wrapper-recomendation__title {
@@ -339,10 +355,11 @@ main {
 
 .hot-form {
     display: none;
+    position: fixed;
     flex-flow: row wrap;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    left: 50%;
+    margin-left: -300px;
     top: 80px;
     width: 600px;
     height: 500px;
