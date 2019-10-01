@@ -10,17 +10,17 @@ let isAside = true;
 button.onclick = () => {
     if(isAside) {
         asideBig[0].style.display = 'none';
-        main[0].style.left = '80px';
-        main[0].style.width = '100%';
         asideSmall[0].style.display = 'flex';
+        main[0].style.paddingLeft = '120px';
+        main[0].style.paddingRight = '180px';
         //wrapper[0].style.justifyContent = 'center';
         isAside = false;
     }
     else {
         asideBig[0].style.display = 'flex';
-        main[0].style.left = '240px';
-        main[0].style.width = '95%';
         asideSmall[0].style.display = 'none';
+        main[0].style.paddingLeft = '240px';
+        main[0].style.paddingRight = '100px';
         isAside = true;
     }
 

@@ -4,6 +4,7 @@ html {
 
 body {
     margin: 0;
+    overflow: hidden;
 }
 
 /* HEADER */
@@ -113,19 +114,40 @@ form {
     background-repeat: no-repeat;
 }
 
+/* WRAPPER */
+
+.wrapper-aside-main {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    background-color: green;
+    padding-top: 56px;
+}
+
 /* ASIDE */
+
+.wrapper-aside-big {
+    display: flex;
+    width: 240px;
+    height: 100vh;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
 
 .aside-big {
     display: flex;
     flex-flow: row wrap;
-    position: fixed;
     width: 240px;
     height: 100%;
-    overflow-y: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
     color: #ffffff;
     font-size: 14px;
     background-color: #282828;
-    margin-top: 56px;
+}
+
+.aside-big:hover {
+    overflow-y: auto;
 }
 
 .aside-small {
@@ -200,9 +222,6 @@ span {
     font-weight: 550;
 }
 
-.guide-section {
-}
-
 hr {
     margin: 10px 0px 10px -5px;
     width: 243px;
@@ -239,7 +258,7 @@ hr {
 }
 
   /* Handle */
-  ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: #888;
 }
 
@@ -251,18 +270,17 @@ hr {
 /* MAIN */
 
 main {
-    position: fixed;
-    left: 240px;
-    top: 56px;
-    width: 95%;
-    height: 100%;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 100vh;
     overflow-y: auto;
     background-color: #1f1f1f;
 }
 
 .wrapper {
     display: flex;
-    padding: 0px 100px 0px 30px;
+    padding: 0px 5px 0px 20px;
 }
 
 .wrapper-recomendation__title {
