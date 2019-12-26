@@ -1,0 +1,52 @@
+html {
+    font-size: 20px;
+}
+
+.table {
+    width: 600px;
+}
+
+.table__header {
+    background-color: grey;
+    border: 0;
+}
+
+.table__delete {
+    cursor: pointer;
+    color: blue;
+}
+
+tr {
+    height: 50px;
+    
+}
+
+td {
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.diagram_block {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 50px 20px;
+    height: 300px;
+}
+
+.diagram {
+    width: 50px;
+    margin: 0 20px;
+}
+
+.diagram__column {
+    border: 1px solid black;
+}
+
+.diagram__alt {
+    display: block;
+    visibility: hidden;
+    top: 5px;
+    right: -5px;
+    background-color: gray;
+}
