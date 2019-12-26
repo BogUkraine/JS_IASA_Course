@@ -1,44 +1,52 @@
 html {
-    font-size: 16px;
+    font-size: 20px;
 }
 
-.block {
+.table {
+    width: 600px;
+}
+
+.table__header {
+    background-color: grey;
+    border: 0;
+}
+
+.table__delete {
+    cursor: pointer;
+    color: blue;
+}
+
+tr {
+    height: 50px;
+    
+}
+
+td {
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.diagram_block {
     display: flex;
-    flex-wrap: wrap;
-    margin: 10px;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 50px 20px;
+    height: 300px;
 }
 
-.label {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin: 10px 0;
+.diagram {
+    width: 50px;
+    margin: 0 20px;
 }
 
-h2 {
-    width: 100%;   
+.diagram__column {
+    border: 1px solid black;
 }
 
-.label > span {
-    display: flex;
-    align-items: center;
-    width: 150px;
-    height: 28px;
-    border: 1px solid grey;
-    background-color: gainsboro;
-    padding: 8px;
-}
-
-input {
-    width: 500px;
-    height: 40px;
-    font-size: 16px;
-}
-
-button {
-    width: 150px;
-    height: 40px;
-    border: 1px solid grey;
-    background-color: gainsboro;
-    margin: 0 10px;
+.diagram__alt {
+    display: block;
+    visibility: hidden;
+    top: 5px;
+    right: -5px;
+    background-color: gray;
 }
